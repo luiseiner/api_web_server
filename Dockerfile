@@ -2,9 +2,7 @@
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /app
 
-# Copy the .csproj file and restore as distinct layers
-COPY ["api_form.csproj", "./"]
-RUN dotnet restore "api_form.csproj"
+
 
 # Copy everything else and build
 COPY . ./
